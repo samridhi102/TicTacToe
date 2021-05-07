@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playersNameFragment">
+
+    <fragment
+        android:id="@+id/playersNameFragment"
+        android:name="com.example.tictactoe.fragments.PlayersNameFragment"
+        android:label="Tic Tac Toe" >
+        <action
+            android:id="@+id/action_playersNameFragment_to_gamesFragment"
+            app:destination="@id/gameFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.tictactoe.fragments.GameFragment"
+        android:label="Tic Tac Toe" >
+
+        <argument
+            android:name="playerNameOne"
+            app:argType="string"/>
+        <argument
+            android:name="playerNameTwo"
+            app:argType="string"/>
+
+    </fragment>
+</navigation>

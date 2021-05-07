@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Matches Played:"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/total_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_total"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_total"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_player1"
+        app:layout_constraintTop_toBottomOf="@id/total_match" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_player1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_player2"
+        app:layout_constraintTop_toBottomOf="@+id/score1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="345dp"
+        android:layout_height="345dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/box21"
+            app:layout_constraintEnd_toStartOf="@+id/box12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box21"
+            app:layout_constraintEnd_toStartOf="@+id/box12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box21"
+            app:layout_constraintEnd_toStartOf="@+id/box12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/box22"
+            app:layout_constraintEnd_toStartOf="@+id/box13"
+            app:layout_constraintStart_toEndOf="@+id/box11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box22"
+            app:layout_constraintEnd_toStartOf="@+id/box13"
+            app:layout_constraintStart_toEndOf="@+id/box11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box22"
+            app:layout_constraintEnd_toStartOf="@+id/box13"
+            app:layout_constraintStart_toEndOf="@+id/box11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/box23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/box31"
+            app:layout_constraintEnd_toStartOf="@+id/box22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box11"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box31"
+            app:layout_constraintEnd_toStartOf="@+id/box22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box11"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box31"
+            app:layout_constraintEnd_toStartOf="@+id/box22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box11"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/box32"
+            app:layout_constraintEnd_toStartOf="@+id/box23"
+            app:layout_constraintStart_toEndOf="@+id/box21"
+            app:layout_constraintTop_toBottomOf="@+id/box12"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box32"
+            app:layout_constraintEnd_toStartOf="@+id/box23"
+            app:layout_constraintStart_toEndOf="@+id/box21"
+            app:layout_constraintTop_toBottomOf="@+id/box12"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box32"
+            app:layout_constraintEnd_toStartOf="@+id/box23"
+            app:layout_constraintStart_toEndOf="@+id/box21"
+            app:layout_constraintTop_toBottomOf="@+id/box12"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/box33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box22"
+            app:layout_constraintTop_toBottomOf="@+id/box13"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box22"
+            app:layout_constraintTop_toBottomOf="@+id/box13"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/box33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box22"
+            app:layout_constraintTop_toBottomOf="@+id/box13"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box21"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box21"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box21"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box33"
+            app:layout_constraintStart_toEndOf="@+id/box31"
+            app:layout_constraintTop_toBottomOf="@+id/box22"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box33"
+            app:layout_constraintStart_toEndOf="@+id/box31"
+            app:layout_constraintTop_toBottomOf="@+id/box22"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box33"
+            app:layout_constraintStart_toEndOf="@+id/box31"
+            app:layout_constraintTop_toBottomOf="@+id/box22"
+            app:srcCompat="@drawable/zero" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/box33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box32"
+            app:layout_constraintTop_toBottomOf="@+id/box23"
+            app:srcCompat="@drawable/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box32"
+            app:layout_constraintTop_toBottomOf="@+id/box23"
+            app:srcCompat="@drawable/cross" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/zero33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/box32"
+            app:layout_constraintTop_toBottomOf="@+id/box23"
+            app:srcCompat="@drawable/zero" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
